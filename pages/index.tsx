@@ -18,7 +18,7 @@ const About = () => {
       </Head>
       {/* // h5 */}
       <h4 className="my-3">
-      <p>Dynamic and creative frontend developer with over 5 years of experience in design and devlopmet of web application, I am a hard working and dedicated professional front-end developer interface designer with a keen eye for detail and a determination to deliver the very highest quality within budget and on time. </p>
+      <p>Dynamic and creative frontend developer with over 5 years of experience in design and devlopment of web application, I am a hard working and dedicated professional front-end developer interface designer with a keen eye for detail and a determination to deliver the very highest quality within budget and on time. </p>
       </h4>
       <div
         className="flex-grow p-4 mt-5 bg-gray-400 dark:bg-black-100"

@@ -13,7 +13,7 @@ export const services: IService[] = [
     Icon: RiComputerLine,
     title: "Frontend Development",
     about:
-      "I can build a beautiful and scalable SPA using <b> HTML</b>,<b>CSS</b> <b>React</b>  and <b>Angular</b> ",
+      "I can build a elegant and scalable SPA using <b> HTML</b>,<b>CSS</b> <b>React</b>  and <b>Angular</b> ",
   },
   {
     Icon: RiTeamFill,
@@ -35,7 +35,7 @@ export const services: IService[] = [
   },{
     Icon: GiTeamIdea,
     title: "Agile Methodology",
-    about: "Wrking in Agile for results-focused approach to s/w development that respects our rapidly changing world.",
+    about: "Working in Agile for results-focused approach to s/w development that respects our rapidly changing world.",
   },
   {
     Icon: AiFillSafetyCertificate,
