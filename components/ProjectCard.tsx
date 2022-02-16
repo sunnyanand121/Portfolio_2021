@@ -2,7 +2,7 @@ import { FunctionComponent, useState } from "react";
 import { IProject } from "../types";
 import Image from "next/image";
 import { AiFillGithub, AiFillProject } from "react-icons/ai";
-import { SiTata,SiAccenture } from "react-icons/si";
+import { SiTata, SiAccenture } from "react-icons/si";
 // TODO Github
 import { MdClose } from "react-icons/md";
 import { fadeInUp, stagger } from "../animations";
@@ -31,42 +31,23 @@ const ProjectCard: FunctionComponent<{
   setShowDetail,
   showDetail,
 }) => {
-  // TODO scroll to top
   return (
     <>
-      {/* //step 1 */}
-      {/* <Image
-        src={image_path}
-        alt={name}
-        layout="responsive"
-        width={300}
-        height={150}
-        onClick={() => setShowDetail(true)}
-        className="cursor-pointer "
-      /> */}
-      {showDetail !== id && <div>
-      <Image
-        width="300"
-        height="150"
-        src={image_path}
-        layout="responsive"
-        alt={name}
-        onClick={() => setShowDetail(id)}
-        className="cursor-pointer "
-        quality={10}
-      />
-      {/* <img
-        width="300"
-        height="150"
-        src={image_path}
-        alt={name}
-        onClick={() => setShowDetail(id)}
-        className="cursor-pointer "
-      /> */}
-
-      <p className="my-2 text-center">{name}</p>
-      {/* //step 1 */}
-      </div>}
+      {showDetail !== id && (
+        <div>
+          <Image
+            width="300"
+            height="150"
+            src={image_path}
+            layout="responsive"
+            alt={name}
+            onClick={() => setShowDetail(id)}
+            className="cursor-pointer "
+            quality={10}
+          />
+          <p className="my-2 text-center">{name}</p>
+        </div>
+      )}
       {showDetail === id && (
         <div className="relative top-0 left-0 z-10 grid w-full h-auto p-2 text-black bg-gray-100 rounded-lg md:absolute md:p-10 dark:bg-black-100 dark:text-gray-100 md:grid-cols-2 gap-x-12 ">
           <motion.div variants={stagger} initial="initial" animate="animate">
@@ -82,20 +63,24 @@ const ProjectCard: FunctionComponent<{
                 width={300}
                 height={150}
               />
-              {/* <img src={image_path} alt={name} /> */}
             </motion.div>
             <motion.div
               className="flex justify-center my-4 space-x-3"
               variants={fadeInUp}
             >
-              <a
-                href={github_url}
-                className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-300 rounded-sm dark:bg-black-500 "
-              >
-                {company=== "TCS" ? <SiTata/> : <SiAccenture /> } <span>{company}</span>
-              </a>
+              {company && (
+                <a
+                  href={github_url}
+                  target="_blank"
+                  className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-300 rounded-sm dark:bg-black-500 "
+                >
+                  {company === "TCS" ? <SiTata /> : <SiAccenture />}{" "}
+                  <span>{company}</span>
+                </a>
+              )}
               <a
                 href={deployed_url}
+                target="_blank"
                 className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-300 rounded-sm dark:bg-black-500"
               >
                 <span>{client}</span>

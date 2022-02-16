@@ -1,16 +1,15 @@
 import { IconType } from "react-icons";
 
 export interface IService {
-  title: string
-  about: string
-  Icon: IconType
-
+  title: string;
+  about: string;
+  Icon: IconType;
 }
 
 export interface ISkill {
-  name: string
-  level: string
-  Icon: IconType
+  name: string;
+  level: string;
+  Icon: IconType;
 }
 
 export interface IProject {
@@ -29,4 +28,10 @@ export interface IProject {
   client_Icon: IconType;
 }
 
-export type Category = 'react' | 'angular' | 'express' | 'automation' | 'mongo';
+export type Category =
+  | "fullstack"
+  | "react"
+  | "angular"
+  | "express"
+  | "automation"
+  | "mongo";
